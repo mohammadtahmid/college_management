@@ -6,6 +6,7 @@ use App\Models\Notice;
 use App\Models\Slider;
 use App\Models\Faculties;
 use Illuminate\Http\Request;
+use App\Models\Infrastructure;
 
 class HomeController extends Controller
 {
@@ -15,7 +16,8 @@ class HomeController extends Controller
 
     public function home(){
         $sliders = Slider::all();
-        return view('home.index',compact('sliders'));
+        $infrastructure = Infrastructure::all();
+        return view('home.index',compact('sliders','infrastructure'));
     }
 
     public function all_notices(){

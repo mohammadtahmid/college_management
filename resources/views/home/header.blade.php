@@ -11,13 +11,13 @@
                             <a class="nav-link fw-bolder" aria-current="page" href="{{ url('/') }}">Home</a>
                         </li>
                         <li class="nav-item px-2">
-                            <a class="nav-link fw-bolder " href="about-us.html">About Us</a>
+                            <a class="nav-link fw-bolder " href="{{ url('/') }}">About Us</a>
                         </li>
                         <li class="nav-item px-2">
                             <a class="nav-link fw-bolder" href="{{ url('view_faculties') }}">Faculties</a>
                         </li>
                         <li class="nav-item px-2">
-                            <a class="nav-link fw-bolder" href="Courses.html">Courses</a>
+                            <a class="nav-link fw-bolder" href="{{ url('/') }}">Courses</a>
                         </li>
                         <li class="nav-item dropdown px-2">
                             <a class="nav-link dropdown-toggle fw-bolder" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">

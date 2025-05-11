@@ -6,6 +6,7 @@ use App\Models\Notice;
 use App\Models\Slider;
 use App\Models\Faculties;
 use Illuminate\Http\Request;
+use App\Models\Infrastructure;
 use Illuminate\Support\Facades\Storage;
 
 class AdminController extends Controller
@@ -174,6 +175,42 @@ class AdminController extends Controller
 
         $faculty->delete();
         flash()->error('Notice Deleted successfully!');
+        return redirect()->back();
+    }
+
+
+
+    //infrastructure
+    public function infrastructure(){
+        $infrastructure = Infrastructure::all();
+        return view('admin.infrastructure',compact('infrastructure'));
+    }
+    public function add_infrastructure(Request $request){
+                $request->validate([
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+        ]);
+
+        $infrastructure = new Infrastructure;
+
+        if ($request->hasFile('image')) {
+            $imagePath = $request->file('image')->store('infrastructure', 'public');
+            $infrastructure->image = $imagePath;
+        }
+
+        $infrastructure->save();
+        flash()->success('Infrastructure Image created successfully!');
+        return redirect()->back();
+    }
+
+    public function delete_infrastructure($id){
+        $infrastructure = infrastructure::findOrFail($id);
+
+        if($infrastructure->image && Storage::disk('public')->exists($infrastructure->image)){
+            Storage::disk('public')->delete($infrastructure->image);
+        }
+
+        $infrastructure->delete();
+        flash()->error('infrastructure Deleted successfully!');
         return redirect()->back();
     }
 

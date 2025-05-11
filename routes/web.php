@@ -38,7 +38,6 @@ route::get('/view_notice/{id}',[HomeController::class,'view_notice']);
 
 route::get('/view_slider',[AdminController::class,'view_slider'])->middleware(['auth','admin']);
 route::post('/add_slider',[AdminController::class,'add_slider'])->middleware(['auth','admin']);
-
 route::get('delete_slider/{id}',[AdminController::class,'delete_slider'])->middleware(['auth','admin']);;
 
 
@@ -47,3 +46,11 @@ route::get('/faculties',[AdminController::class,'faculties'])->middleware(['auth
 route::post('add_faculties',[AdminController::class,'add_faculties'])->middleware(['auth','admin']);
 route::get('/view_faculties',[HomeController::class,'view_faculties']);
 route::get('delete_faculty/{id}',[AdminController::class,'delete_faculty'])->middleware(['auth','admin']);
+
+
+
+
+//Infrastructure
+route::get('/infrastructure',[AdminController::class,'infrastructure'])->middleware(['auth','admin']);
+route::post('/add_infrastructure',[AdminController::class,'add_infrastructure'])->middleware(['auth','admin']);
+route::get('delete_infrastructure/{id}',[AdminController::class,'delete_infrastructure'])->middleware(['auth','admin']);

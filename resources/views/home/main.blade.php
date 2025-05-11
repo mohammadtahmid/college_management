@@ -130,36 +130,13 @@
 <hr class="border  w-23 mx-auto border-warning border-2 opacity-75 ">
 <div class="container">
     <div class="row">
+        @foreach ($infrastructure as $infrastructures)
         <div class="col-md-6 col-lg-4 item">
             <a class="lightbox" target="_blank">
-                <img class="img-fluid image scale-on-hover" src="https://res.cloudinary.com/dpnaptcei/image/upload/v1537070505/Gallery/image1.jpg">
+                <img class="img-fluid image scale-on-hover" style="height: 300px;" src="{{ url(asset('storage/'.$infrastructures->image)) }}">
             </a>
         </div>
-        <div class="col-md-6 col-lg-4 item">
-            <a class="lightbox" target="_blank">
-                <img class="img-fluid image scale-on-hover" src="https://res.cloudinary.com/dpnaptcei/image/upload/v1537070507/Gallery/image2.jpg">
-            </a>
-        </div>
-        <div class="col-md-6 col-lg-4 item">
-            <a class="lightbox" target="_blank">
-                <img class="img-fluid image scale-on-hover" src="https://res.cloudinary.com/dpnaptcei/image/upload/v1537070506/Gallery/image3.jpg">
-            </a>
-        </div>
-        <div class="col-md-6 col-lg-4 item">
-            <a class="lightbox" target="_blank">
-                <img class="img-fluid image scale-on-hover" src="https://res.cloudinary.com/dpnaptcei/image/upload/v1537070505/Gallery/image4.jpg">
-            </a>
-        </div>
-        <div class="col-md-6 col-lg-4 item">
-            <a class="lightbox" target="_blank">
-                <img class="img-fluid image scale-on-hover" src="https://res.cloudinary.com/dpnaptcei/image/upload/v1537070506/Gallery/image5.jpg">
-            </a>
-        </div>
-        <div class="col-md-6 col-lg-4 item">
-            <a class="lightbox" target="_blank">
-                <img class="img-fluid image scale-on-hover" src="https://res.cloudinary.com/dpnaptcei/image/upload/v1537070508/Gallery/image6.jpg">
-            </a>
-        </div>
+        @endforeach
 
 
 

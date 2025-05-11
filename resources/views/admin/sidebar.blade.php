@@ -23,7 +23,10 @@
                     Faculties </a>
                 </li>
 
-
+                <li class="{{ Request::is('infrastructure') ? 'active' : '' }}">
+                    <a href="{{url('infrastructure')}}"> <i class="fa-solid fa-road-bridge"></i>
+                    Faculties </a>
+                </li>
                 <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-windows"></i>Example dropdown </a>
                   <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
                     <li><a href="#">Page</a></li>
