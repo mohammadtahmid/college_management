@@ -11,19 +11,31 @@
 
 /* preloader */
 #preloader{
-    background: white url(loader.gif ) no-repeat center;
+    /* background: white url(loader.gif ) no-repeat center;
     background-size:100% ;
     height: 100vh;
     width: 100%;
     position: fixed;
-    z-index: 100;
+    z-index: 100; */
+
+        position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #fff;
+    background-image: url('loader.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100px 100px; /* এখানে loader এর actual size অনুযায়ী সেট করো */
+    z-index: 9999;
 }
 
 @media (max-width:990px) {
     #preloader {
        background-size: 960px ;
        position: fixed;
-      
+
     }
 }
 
@@ -66,7 +78,7 @@ p{
 
 a{
     text-decoration: none;
-    
+
 }
 
 .w-23{
@@ -135,7 +147,7 @@ border-radius: 0.7rem;
     background: linear-gradient(144deg, rgba(228,65,31,0.5102415966386555) 28%, rgba(72,133,230,0.4598214285714286) 66%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e4411f",endColorstr="#4885e6",GradientType=1);
     border-radius: 0.8rem;
-  
+
 }
 .bg-infra{
     background-color: #489de6;
@@ -145,9 +157,9 @@ border-radius: 0.7rem;
     display: flex;
     align-items: center;
     justify-content: center;
-   
+
 }
-/* 
+/*
 
 6-sigma text */
 .sigma-text{
@@ -165,10 +177,10 @@ border-radius: 0.7rem;
     .data-sheet{
         height: 500px;
         width: 340px;
-    } 
+    }
 }
 
-/* 
+/*
 thankyou page css */
 
 
@@ -209,31 +221,30 @@ thankyou page css */
 
 
 /* infra-gallery */
- 
+
   .gallery-block.grid-gallery{
       font-weight: bold;
       font-size: 1.4rem;
       text-transform: uppercase;
   }
-  
+
   .gallery-block.grid-gallery a:hover{
     opacity: 0.8;
   }
-  
+
   .gallery-block.grid-gallery .item img{
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
     transition: 0.4s;
   }
-  
+
   .gallery-block.grid-gallery .item{
     margin-bottom: 20px;
   }
-  
+
   @media (min-width: 576px) {
-  
+
     .gallery-block.grid-gallery .scale-on-hover:hover{
       transform: scale(1.05);
       box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15) !important;
     }
   }
-  
