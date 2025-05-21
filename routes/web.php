@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\TeachersController;
 
 route::get('/',[HomeController::class,'home']);
 
@@ -54,3 +55,24 @@ route::get('delete_faculty/{id}',[AdminController::class,'delete_faculty'])->mid
 route::get('/infrastructure',[AdminController::class,'infrastructure'])->middleware(['auth','admin']);
 route::post('/add_infrastructure',[AdminController::class,'add_infrastructure'])->middleware(['auth','admin']);
 route::get('delete_infrastructure/{id}',[AdminController::class,'delete_infrastructure'])->middleware(['auth','admin']);
+
+
+
+
+//Course
+route::get('/course',[AdminController::class,'course'])->middleware(['auth','admin']);
+route::post('add_course',[AdminController::class,'add_course'])->middleware(['auth','admin']);
+
+//Course User
+route::get('/diploma',[HomeController::class,'diploma']);
+route::get('/skil',[HomeController::class,'skil']);
+
+
+
+
+
+
+
+
+//Teacher Dashboard
+route::get('teachers',[TeachersController::class,'teachers'])->middleware(['auth','teacher']);

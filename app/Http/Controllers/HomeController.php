@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Course;
 use App\Models\Notice;
 use App\Models\Slider;
 use App\Models\Faculties;
@@ -37,6 +38,18 @@ class HomeController extends Controller
         $faculties = Faculties::get();
         return view('home.faculties', compact('faculties'));
 
+    }
+
+
+
+    //course show diploma
+    public function diploma(){
+        $diploma = Course::where('type','diploma')->get();
+        return view('home.diploma',compact('diploma'));
+    }
+    public function skil(){
+        $skil = Course::where('type','RPL')->get();
+        return view('home.skil',compact('skil'));
     }
 
 

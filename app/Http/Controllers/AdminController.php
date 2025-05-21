@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Course;
 use App\Models\Notice;
 use App\Models\Slider;
 use App\Models\Faculties;
@@ -211,6 +212,39 @@ class AdminController extends Controller
 
         $infrastructure->delete();
         flash()->error('infrastructure Deleted successfully!');
+        return redirect()->back();
+    }
+
+
+    //Course
+    public function course(){
+        $courses = Course::all();
+        return view('admin.course',compact('courses'));
+    }
+
+    public function add_course(Request $request){
+        $request->validate([
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'name' => 'required|string|max:255',
+            'capacity'=> 'required|string',
+            'type'=> 'required|string',
+        ]);
+
+
+        $course = new Course;
+
+        $course->name = $request->name;
+        $course->capacity = $request->capacity;
+        $course->type = $request->type;
+
+
+        if ($request->hasFile('image')) {
+            $imagePath = $request->file('image')->store('course', 'public');
+            $course->image = $imagePath;
+        }
+
+        $course->save();
+        flash()->success('Course created successfully!');
         return redirect()->back();
     }
 
