@@ -129,7 +129,8 @@
 
                     <!--Google map-->
                     <div id="map-container-section" class="z-depth-1-half map-container-section mb-4" style="height: 400px">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15049.729820528972!2d72.8430003329626!3d19.436912994423043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7a8e3e0902d9b%3A0x80b8612c9db00bb1!2sDhaniv%20Baug%2C%20Nalasopara%20East%2C%20Nala%20Sopara%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1702213623696!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.1121133717597!2d90.35364917432705!3d23.779021687678853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c0bd8b5bf64d%3A0xba36f69bae9f4d75!2sDhaka%20Central%20Polytechnic%20Institute!5e0!3m2!1sen!2sbd!4v1747935869641!5m2!1sen!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
                     </div>
                     <!-- Buttons-->
                     <div class="row text-center">

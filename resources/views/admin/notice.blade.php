@@ -84,7 +84,7 @@
                                                         class="btn btn-success">View</a>
                                                     <a href="{{ url('edit_notice', $data->id) }}" class="btn btn-info mx-2">Edit</a>
                                                     <a href="{{ url('delete_notice', $data->id) }}"
-                                                        onclick="return confirm('Are you sure you want to delete this notice?')"
+                                                        onclick="confirmation(event)"
                                                         class="btn btn-danger">Delete</a>
                                                 </td>
                                             </tr>
@@ -101,14 +101,7 @@
                     </div>
                 </div>
                 <!-- JavaScript files-->
-                <script src="{{asset('admincss/vendor/jquery/jquery.min.js')}}"></script>
-                <script src="{{asset('admincss/vendor/popper.js/umd/popper.min.js')}}"> </script>
-                <script src="{{asset('admincss/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
-                <script src="{{asset('admincss/vendor/jquery.cookie/jquery.cookie.js')}}"> </script>
-                <script src="{{asset('admincss/vendor/chart.js/Chart.min.js')}}"></script>
-                <script src="{{asset('admincss/vendor/jquery-validation/jquery.validate.min.js')}}"></script>
-                <script src="{{asset('admincss/js/charts-home.js')}}"></script>
-                <script src="{{asset('admincss/js/front.js')}}"></script>
+@include('admin.script')
 </body>
 
 </html>

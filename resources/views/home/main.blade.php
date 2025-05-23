@@ -87,7 +87,7 @@
             <div class="card pt-3 " style="width: 10rem;">
                 <i class="fa-brands fa-google-wallet fa-4x text-center"></i>
                 <div class="card-body text-center">
-                    <h5 class="card-title">We Provide</h5>
+                    <h5 class="card-title">Book Library</h5>
                     <p class="card-text ">Free Bag & Note Books for Each section Students .</p>
                 </div>
             </div>
@@ -108,7 +108,7 @@
     <div class="row col-xxl-12 justify-content-md-center">
         <div class="col-md-4" data-aos="fade-up">
             <div class="ms-2 text-center">
-                <img src="https://www.ris.education/wp-content/uploads/2022/09/6-sigma-01_1-1475x1536.webp" alt="6-sigma" class="img-fluid" height="400rem" width="420rem">
+                <img src="https://images.app.goo.gl/3v3qHQgnAEg5tyCj9" alt="6-sigma" class="img-fluid" height="400rem" width="420rem">
             </div>
         </div>
 
